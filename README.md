@@ -10,6 +10,8 @@ This is my personal VI setup which I use for most of my daily work
  git submodule init
  git submodule update
 * Create some links
- ln -s ~/vim-config.git/vim ~/.vim
- ln -s ~/vim-config.git/vimrc ~/.vimrc
+```
+ln -s ~/vim-config.git/vim ~/.vim
+ln -s ~/vim-config.git/vimrc ~/.vimrc
+```
 * Enjoy your new 'n shiny editor!
