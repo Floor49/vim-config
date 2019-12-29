@@ -42,13 +42,6 @@ set laststatus=1
 syntax enable
 "colorscheme solarized
 
-"" Statusbar
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
-set laststatus=2
-let g:Powerline_colorscheme='solarized256'
-let g:Powerline_symbols='fancy'
-let g:Powerline_theme='short'
-
 "" Hilight trailing whitespace
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
@@ -116,6 +109,11 @@ function! AlignFats()
   " Restore cursor position
   call setpos('.', save_cursor)
 endfun
+
+""yml support
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 vmap . :Align =><CR>
 noremap , :call AlignFats()<CR>
